@@ -45,9 +45,7 @@ def ReadCSV2():
 
 ########MAIN GUI########
 GUI = Tk() # นี่คือหน้าต่างหลักของโปรแกรม
-GUI.title('ตัวอย่าง')
-
-
+GUI.title('MoneyTrack')
 
 w = 700
 h = 700
@@ -60,7 +58,7 @@ x = (ws/2) - (w/2)
 y = (hs/2) - (h/2)
 
 GUI.geometry(f'{w}x{h}+{x:.0f}+{y:.0f}') #ปรับขนาด
-GUI.iconbitmap('wallet.ico')
+GUI.iconbitmap('Google-wallet.ico')
 #GUI.state('zoomed')
 
 ########FONT#########
@@ -82,16 +80,16 @@ GUI.bind('<F4>',lambda x: GUI.destroy())
 import webbrowser
 
 def About():
-	url = 'https://www.uncle-engineer.com'
+	url = 'https://www.facebook.com/pluemwisit.suwannao/'
 	webbrowser.open(url)
 
 from tkinter import messagebox as msb
 
-helpmenu = Menu(menubar,tearoff=0)
-menubar.add_cascade(label='Help',menu=helpmenu)
-helpmenu.add_command(label='About', command=About)
-helpmenu.add_command(label='Donate',command=lambda: msb.showinfo('Donate','เลขบัญชี: 700 258 444\nธนาคารกรุงไทย'))
-#command=lambda: msb.showinfo('Donate','เลขบัญชี: 700 258 444\nธนาคารกรุงไทย')
+helpmenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label='Help', menu=helpmenu)
+helpmenu.add_command(label='About',command=About)
+helpmenu.add_command(label='Donate',command=lambda: msb.showinfo('Donate', 'สนับสนุนได้ที่ : 092-429-3574\n พร้อมเพย์(PromptPay)\n นายวิศิษฐ์ สุวรรณเนาว์'))
+#command=lambda: msb.showinfo('Donate', 'สนับสนุนได้ที่ : 092-429-3574\n พร้อมเพย์(PromptPay)\n นายวิศิษฐ์ สุวรรณเนาว์')
 
 
 from tkinter.ttk import Notebook
